@@ -22,6 +22,6 @@ public class ContaPoupanca extends Conta{
     }
         
        public String verificaSaldo(){
-            return String.format("Seu saldo atual Ã© de R$%.2f", saldo);
+            return String.format("Seu saldo atual é de R$%.2f", saldo);
     }
 }

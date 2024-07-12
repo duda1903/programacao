@@ -27,12 +27,12 @@ public class ContaCorrente extends Conta{
     }
     
     public String verificaSaldo(){
-        String retorno = String.format("Seu saldo é de R$%.2f", saldo);
+        String retorno = String.format("Seu saldo disponivel: R$%.2f", saldo);
         if(saldo>=0){
-            retorno+=String.format("Limite disponível: R$%.2f", limite);
+            retorno+=String.format("Limite disponivel: R$%.2f", limite);
         }
         else{
-            retorno+=String.format("Limite disponível: R$%.2f", limite+saldo);
+            retorno+=String.format("Limite disponivel: R$%.2f", limite+saldo);
         }
         return retorno;
     }

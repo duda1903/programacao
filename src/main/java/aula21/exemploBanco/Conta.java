@@ -35,16 +35,16 @@ public class Conta {
      public Conta (String senha, String titular){
          this.titular = titular;
          this.senha = senha;
-         geraIndetitificador();
+         geraIdetitificador();
      }
-     private void geraIndetitificador(){
+     private void geraIdetitificador(){
         Random aleatorio = new Random();
-        String indentificador = "";
+        String identificador = "";
         for(int i=0;i<4;i++){
-            indentificador+=(char)aleatorio.nextInt(65,90);
+            identificador+=(char)aleatorio.nextInt(65,90);
         }
-        indentificador+=aleatorio.nextInt(1000,2000);
-        this.identificador = indentificador;
+        identificador+=aleatorio.nextInt(1000,2000);
+        this.identificador = identificador;
     }
      
      public void depositar(float valor){
@@ -52,6 +52,8 @@ public class Conta {
     }
      
      public boolean validarAcesso(String identificador, String senha){
+         System.out.println(identificador+' '+senha);
+         System.out.println(this.identificador+" "+this.senha);
         return this.identificador.equals(identificador) && this.senha.equals(senha);
     }
 }
